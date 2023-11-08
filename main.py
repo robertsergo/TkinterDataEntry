@@ -8,10 +8,22 @@ def enter_data():
     title = title_combobox.get()
     age = age_spinbox.get()
     nationality =  nationality_combobox.get()
-    completed_courses =  
+    completed_courses = num_courses_spinbox.get()
+    nb_semestre = num_semestre_spinbox.get()
+
+    registrat_status = reg_status_var.get()
 
 
-    print("Hello  ", first_name, " ", last_name)
+    print("Firstname =  ",first_name)
+    print("Lastname = ",last_name)
+    print("Title = ", title)
+    print("Age = ", age)
+    print("Nationality = ", nationality)
+    print("Nb complete course = ", completed_courses)
+    print("Nb semestre = ", nb_semestre)
+    print("registration status = ", registrat_status)
+    print(" ")
+
 
 window = tkinter.Tk()
 
@@ -55,8 +67,9 @@ for wiget in user_info_frame.winfo_children():
 course_frame = tkinter.LabelFrame(frame)
 course_frame.grid(row=1, column=0, sticky="news", padx=20, pady=20)
 
+reg_status_var = tkinter.StringVar(value="not registred")
 registered_label = tkinter.Label(course_frame, text="Registration Status")
-registered_check = tkinter.Checkbutton(course_frame, text="Currently Registered")
+registered_check = tkinter.Checkbutton(course_frame, text="Currently Registered", variable = reg_status_var, onvalue="registed", offvalue="not registed")
 registered_label.grid(row=0, column=0)
 registered_check.grid(row=1, column=0)
 
