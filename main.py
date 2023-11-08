@@ -39,4 +39,35 @@ for wiget in user_info_frame.winfo_children():
     wiget.grid_configure(padx=15, pady=10)
 
 
+# save course info
+course_frame = tkinter.LabelFrame(frame)
+course_frame.grid(row=1, column=0, sticky="news", padx=20, pady=20)
+
+registered_label = tkinter.Label(course_frame, text="Registration Status")
+registered_check = tkinter.Checkbutton(course_frame, text="Currently Registered")
+registered_label.grid(row=0, column=0)
+registered_check.grid(row=1, column=0)
+
+num_courses_label = tkinter.Label(course_frame, text="# Completed Couses")
+num_courses_spinbox = tkinter.Spinbox(course_frame, from_=0, to="infinity")
+num_courses_label.grid(row=0, column=1)
+num_courses_spinbox.grid(row=1, column=1)
+
+num_semestre_label = tkinter.Label(course_frame, text="# semestre")
+num_semestre_spinbox = tkinter.Spinbox(course_frame, from_=0, to="infinity")
+num_semestre_label.grid(row=0, column=2)
+num_semestre_spinbox.grid(row=1, column=2)
+
+for wiget in course_frame.winfo_children():
+    wiget.grid_configure(padx=10, pady=10)
+
+# Accept term
+terms_frame = tkinter.LabelFrame(frame, text="Terms & Condition")
+terms_frame.grid(row=2, column=0, sticky="news", padx=20, pady=20)
+terms_check = tkinter.Checkbutton(terms_frame, text="I accept the terms and conditions")
+terms_check.grid(row=0, column=0)
+
+button = tkinter.Button(frame, text="Enter Data")
+button.grid(row=3, column=0, sticky="news", padx=20, pady=20)
+
 window.mainloop()
