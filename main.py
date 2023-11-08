@@ -1,6 +1,18 @@
 import tkinter
 from tkinter import ttk
 
+def enter_data():
+    # recuperer les valeurs
+    first_name = first_name_entry.get()
+    last_name = last_name_entry.get()
+    title = title_combobox.get()
+    age = age_spinbox.get()
+    nationality =  nationality_combobox.get()
+    completed_courses =  
+
+
+    print("Hello  ", first_name, " ", last_name)
+
 window = tkinter.Tk()
 
 window.title("Tkinter Data Entry ")
@@ -67,7 +79,7 @@ terms_frame.grid(row=2, column=0, sticky="news", padx=20, pady=20)
 terms_check = tkinter.Checkbutton(terms_frame, text="I accept the terms and conditions")
 terms_check.grid(row=0, column=0)
 
-button = tkinter.Button(frame, text="Enter Data")
+button = tkinter.Button(frame, text="Enter Data", command = enter_data)
 button.grid(row=3, column=0, sticky="news", padx=20, pady=20)
 
 window.mainloop()
