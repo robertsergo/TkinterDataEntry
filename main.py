@@ -37,7 +37,7 @@ def enter_data():
         # chemin_fichier = "C:\Users\Admin\Documents\GitHub\TkinterDataEntry\data.xlsx"
         # file_path = "~C:\Utilisateurs\Admin\Documents\GitHub\TkinterDataEntry\data1.xlsx"
         # filepath = "https://github.com/robertsergo/TkinterDataEntry/data.xlsx"
-        file_path = "~C:\Admin\Documents\GitHub\TkinterDataEntry\data.xlsx"
+        file_path = "~C:\Users\user\Documents\GitHub\TkinterDataEntry\Book1.xlsx"
         if not os.path.exists(file_path):
             workbook = openpyxl.Workbook()
             sheet = workbook.active
